@@ -43,19 +43,19 @@
 
 // curry fuctionacts like turning sum(10,30,20) to sum(10)(30)(20) nesting functions
 
-function sum(a, b, c) {
-  return a + b + c;
-}
+// function sum(a, b, c) {
+//   return a + b + c;
+// }
 
-function curry(fn) {
-  return function (a) {
-    return function (b) {
-      return function (c) {
-        return fn(a, b, c);
-      };
-    };
-  };
-}
+// function curry(fn) {
+//   return function (a) {
+//     return function (b) {
+//       return function (c) {
+//         return fn(a, b, c);
+//       };
+//     };
+//   };
+// }
 
 // Currying is a transformation of functions that translates a function from callable as f (a, b, c) into callable as f (a) (b) (c).
 // const curriedsum = curry(sum);
@@ -85,7 +85,7 @@ function curry(fn) {
 // const person = {
 //   name: "Frank",
 //   sayMyName: function () {
-//     // console.log("my name is " + this.name);
+//     console.log("my name is " + this.name);
 //   },
 // };
 // person.sayMyName();
@@ -126,16 +126,18 @@ function curry(fn) {
 // };
 // console.log(person2.getFullName());
 
-function person(Fname, Lname) {
-  this.firstname = Fname;
-  this.lastname = Lname;
-}
+// function person(Fname, Lname) {
+//   this.firstname = Fname;
+//   this.lastname = Lname;
+// }
 
-const person1 = new person("frank", "mona");
-const person2 = new person("oguche", "mona");
+// const person1 = new person("frank", "mona");
+// const person2 = new person("oguche", "mona");
 
-person.prototype.getFullName = function () {
-  return this.firstname + " " + this.lastname;
-};
-console.log(person1.getFullName());
-console.log(person2.getFullName());
+// person.prototype.getFullName = function () {
+//   return this.firstname + " " + this.lastname;
+// };
+// console.log(person1.getFullName());
+// console.log(person2.getFullName());
+
+// Inheriting prototype
