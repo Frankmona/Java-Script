@@ -286,3 +286,212 @@
 // }
 
 // greet("borrito", Morning);
+
+// powerful array method
+// forEach, map, filter, find, reduce
+
+// forEach -- it doesnt return a new array
+
+// const people = [
+//   { name: "bob", age: 24, position: "front_end_developer", id: 1 },
+//   { name: "peter", age: 28, position: "back_end_developer", id: 2 },
+//   { name: "susy", age: 14, position: "ui/ux_designer", id: 3 },
+// ];
+
+// function showPerson(person) {
+//   //   console.log(person.name.toUpperCase());
+//   console.log(person);
+// }
+
+// // people.forEach(showPerson);
+
+// // also the above can be done by passing the function annonymously
+// people.forEach(function (item) {
+//   console.log(item.name.toLowerCase());
+// });
+
+// Map  -- it does return a  new array
+// it always depend on the original array
+
+// using the above const
+
+// const age = people.map(function (person) {
+//   //   return person.age;
+//   //   map allowu to modify
+//   return person.age + 20;
+// });
+// console.log(age);
+
+// using map to change and add new object as seen below
+// const newPeople = people.map(function (person) {
+//   return {
+//     firstName: person.name.toUpperCase(),
+//     oldAge: person.age,
+//   };
+// });
+
+// console.log(newPeople);
+
+// const allNames = people.map(function (pern) {
+//   return `<h1>${pern.name}</h1>`;
+// });
+
+// document.body.innerHTML = allNames.join(",-");
+
+// console.log(allNames);
+
+// filter -- returns a new array and also manipulate the size of the  array also returns base on condition.
+
+// const youngPeople = people.filter(function (yourage) {
+//   return yourage.age <= 25;
+// });
+// console.log(youngPeople);
+
+// const developer = people.filter(function (jobrole) {
+//   return jobrole.position == `back_end_developer`;
+// });
+// console.log(developer);
+
+// find -- returns a single object, returns first match, if no match its undefined, great for getting unique value(id  )
+
+// const finder = people.find(function (peace) {
+//   return peace.id == 3;
+// });
+// console.log(finder);
+
+// reduce --- iterates, callback function,
+//  reduces to a single value-numer,array,object
+// 1 parameter ('acc')-  total of all calculations
+// 2 parameter ('curr') - current iteration/value
+
+// const people = [
+//   { name: "bob", age: 24, position: "front_end_developer", id: 1, salary: 500 },
+//   {
+//     name: "peter",
+//     age: 28,
+//     position: "back_end_developer",
+//     id: 2,
+//     salary: 600,
+//   },
+//   { name: "susy", age: 14, position: "ui/ux_designer", id: 3, salary: 700 },
+// ];
+
+// const total = people.reduce(function (accum, current) {
+//   console.log(`total is ${accum}`);
+//   console.log(`current amount is ${current.salary}`);
+//   accum += current.salary;
+//   return accum;
+// }, 500);
+
+// console.log(total);
+
+// Math operator-- standard built in object always available
+
+// floor --- use to round up number by removing the decima
+// const number = 4.5343;
+// const result = Math.floor(number);
+
+// ceil --- rounds up to the nearest whole number
+// const number = 4.2343;
+// const result = Math.ceil(number);
+
+// sqrt -- to find square root
+// const number = 25;
+// const result = Math.sqrt(number);
+
+// min
+// const result = Math.min(2, 3, 4, 10, 23);
+
+// max
+// const result = Math.max(2, 3, 4, 10, 23);
+
+// random --gives random numbers
+// const result = Math.random();
+
+// to avoid the random numbers from having decimal we use the below method
+// const result = Math.ceil(Math.random() * 10);
+// or
+// const result = Math.floor(Math.random() * 10 + 1);
+// console.log(result);
+
+// Date
+// const months = [
+//   "january",
+//   "february",
+//   "march",
+//   "april",
+//   "may",
+//   "june",
+//   "july",
+//   "august",
+//   "september",
+//   "october",
+//   "november",
+//   "december",
+// ];
+
+// const days = [
+//   "monday",
+//   "tuesday",
+//   "wednesday",
+//   "thursday",
+//   "friday",
+//   "saturday",
+//   "sunday",
+// ];
+// const date = new Date();
+// // console.log(date);
+
+// const month = date.getMonth();
+// console.log(months[month]);
+
+// const day = date.getDay();
+// console.log(days[day]);
+
+// console.log(date.getDate());
+// console.log(date.getFullYear());
+// console.log(date.getHours());
+
+// const today = ` today is ${date.getDate()}, ${days[day]}, ${
+//   months[month]
+// }, ${date.getFullYear()}`;
+// console.log(today);
+
+// document.body.innerHTML = today;
+
+// DOM -- Document object model
+
+// getElementByID('element') -- this method helps to
+// 1. select the  element or group of element that you Want
+// 2. decide the effect we want to apply  on the selection.
+
+// const h1 = document.getElementById("title");
+// h1.style.color = "red";
+
+// or use the below
+
+// document.getElementById("title").style.color = "blue";
+
+// const btn = document.getElementById("btn");
+// btn.style.backgroundColor = "blue";
+// btn.style.color = "white";
+
+// or use the below
+
+// document.getElementById("btn").style.backgroundColor = "pink";
+
+// getElementByTagName("TagName");
+// 1. it select using array like object
+
+// const heading = document.getElementsByTagName("h2");
+// heading[1].style.color = "green";
+
+const items = document.getElementsByTagName("li");
+
+// to make use of a forEach method here we use the ...
+
+const betterItem = [...items];
+
+betterItem.forEach(function (item) {
+  console.log(item);
+});
