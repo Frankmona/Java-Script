@@ -486,12 +486,32 @@
 // const heading = document.getElementsByTagName("h2");
 // heading[1].style.color = "green";
 
-const items = document.getElementsByTagName("li");
+// const items = document.getElementsByTagName("li");
+// items[3].style.color = "red";
 
 // to make use of a forEach method here we use the ...
+// the three doys in the array bracket helps to convert the items into array so a forEach method can be used
+// const betterItem = [...items];
 
-const betterItem = [...items];
+// betterItem.forEach(function (item) {
+//   console.log(item);
+// });
 
-betterItem.forEach(function (item) {
-  console.log(item);
-});
+// getElementByClassName('classname')
+
+// const listItems = document.getElementsByClassName("special");
+// listItems[2].style.color = "orange";
+// listItems[0].style.color = "red";
+
+// querySelector('any css') -- select single
+// querySelectorAll('any css') --  selects all
+
+const results = document.querySelector("#results");
+results.style.backgroundColor = "purple";
+
+const item = document.querySelector(".special");
+item.style.color = "white";
+
+const lastItem = document.querySelector("li:last-child");
+lastItem.style.color = "white";
+console.log(lastItem);
