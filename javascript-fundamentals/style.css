@@ -1,0 +1,20 @@
+.color{
+    background-color: red;
+    color: white;
+}
+
+
+.text{
+    font-size: 2rem;
+    letter-spacing: 1.5rem;
+}
+
+body{
+    background-color: gray;
+}
+
+
+.blue{
+    background-color: blue;
+    color: white;
+}

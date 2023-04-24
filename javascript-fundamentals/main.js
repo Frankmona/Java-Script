@@ -506,12 +506,199 @@
 // querySelector('any css') -- select single
 // querySelectorAll('any css') --  selects all
 
-const results = document.querySelector("#results");
-results.style.backgroundColor = "purple";
+// const results = document.querySelector("#results");
+// results.style.backgroundColor = "purple";
 
-const item = document.querySelector(".special");
-item.style.color = "white";
+// const item = document.querySelector(".special");
+// item.style.color = "white";
 
-const lastItem = document.querySelector("li:last-child");
-lastItem.style.color = "white";
-console.log(lastItem);
+// const lastItem = document.querySelector("li:last-child");
+// lastItem.style.color = "white";
+// console.log(lastItem);
+
+// const list = document.querySelectorAll(".special");
+// // using forEach
+
+// list.forEach(function (item) {
+//   console.log(item);
+//   item.style.color = "red";
+// });
+
+// childNodes ---return of child nodes and white spaces which is treated as text node
+// select element or group  of element that we want
+// decide the effect we want to apply  on the selection
+
+// children
+// firstChild
+// lastChild
+
+// const results = document.querySelector("#results");
+
+// const allChildren = results.childNodes;
+// // console.log(allChildren);
+
+// const children = results.children;
+// // console.log(children);
+// // console.log(children[3]);
+
+// console.log(results.firstChild);
+// console.log(results.lastChild);
+
+// parentElement
+
+// const heading = document.querySelector("h2");
+// console.log(heading.parentElement.parentElement);
+
+// const parent = heading.parentElement;
+// heading.style.color = "red";
+
+// previousSibiling
+// nextSibiling
+// returnWhitespace
+
+// const first = document.querySelector(".first");
+// console.log(first);
+
+// use this to target the nextSibling and did the ,nextSibling twice because the first one returns a text whitespace
+// const second = (first.nextSibling.nextSibling.style.color = "blue");
+
+// console.log(second);
+
+// previousSibiling
+// const last = document.querySelector("#last");
+// // console.log(last);
+
+// const third = (last.previousSibling.previousSibling.style.color = "pink");
+// console.log(third);
+
+// previousElementSibiling
+// nextElementSibiling
+
+// const first = document.querySelector(".first");
+// const second = (first.nextElementSibling.style.color = "green");
+
+// const last = document.querySelector("#last");
+// const third = (last.previousElementSibling.style.color = "pink");
+
+// nodeValue
+// textContent
+
+// const item = document.getElementById("special");
+
+// const value = item.firstChild.nodeValue;
+// const value = item.childNodes[0].nodeValue;
+// console.log(value);
+
+// const easyV = document.getElementById("special");
+// const easy = easyV.textContent;
+// console.log(easy);
+
+// getAttribute()
+// setAttrubute()
+
+// const first = document.querySelector(".first");
+// const classValue = first.getAttribute("class");
+// console.log(classValue);
+
+// getAttribute using ID
+
+// const first = document.querySelector(".first");
+// const idValue = first.getAttribute("id");
+// console.log(idValue);
+
+// getAttribute for links
+
+// const link = document.getElementById("link");
+
+// const showLink = link.getAttribute("href");
+// console.log(showLink);
+
+// setAttributes
+
+// const last = link.nextElementSibling;
+// last.setAttribute("class", "first");
+// last.textContent = "i am frank now";
+// console.log(last);
+
+// className -- use to check the class and also to assign a new class
+// classList
+
+// const first = document.getElementById("first");
+// const second = document.getElementById("second");
+// const third = document.getElementById("third");
+
+// const classValue = first.className;
+// console.log(classValue);
+
+// assign className
+
+// second.className = "color";
+// second.classList.add("text"); --u can use this to add a class on top another active class
+
+// creatElement("element");
+// creatTextNode("text content");
+// Element.appendChild(childElement);
+
+// const result = document.querySelector("#result");
+
+// create an empty element
+// const bodyDiv = document.createElement("div");
+
+// create textNode
+
+// const text = document.createTextNode("i need a remote job");
+
+// to append
+
+// bodyDiv.appendChild(text);
+
+// console.log(bodyDiv);
+
+// to append it so it can show on the UI
+// document.body.appendChild(bodyDiv);
+
+// const heading = document.createElement("h2");
+// const headingText = document.createTextNode(
+//   "hello you will get a remote job good pay soooon!"
+// );
+// heading.appendChild(headingText);
+// heading.classList.add("blue");
+
+// result.appendChild(heading);
+
+// insertBefore("element", "location"); -- helps to specify where u want to add an element to...
+
+// const result = document.querySelector("#result");
+
+// // create an empty element
+// const bodyDiv = document.createElement("div");
+
+// // create textNode
+
+// const text = document.createTextNode("i need a remote job");
+
+// // to append
+
+// bodyDiv.appendChild(text);
+// document.body.insertBefore(bodyDiv, result);
+
+// replaceChild(new, old); -- it replaces the old elemnt with the new one
+
+// const smallHeading = document.createElement("h6");
+// const smallText = document.createTextNode("God will do it");
+// smallHeading.classList.add("color");
+// smallHeading.appendChild(smallText);
+// document.body.replaceChild(smallHeading, bodyDiv);
+
+// prepend
+// innerText
+
+// const header = document.createElement("h2");
+// header.innerText = `God go do am!`;
+// document.body.prepend(header);
+
+// remove
+// removeChild -- both aere use to remove element from the DOM
+
+const result = document.querySelector("#result");
+result.remove();
