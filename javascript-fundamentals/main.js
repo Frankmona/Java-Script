@@ -700,5 +700,164 @@
 // remove
 // removeChild -- both aere use to remove element from the DOM
 
-const result = document.querySelector("#result");
-result.remove();
+// const result = document.querySelector("#result");
+// // // result.remove();
+
+// // using the removce child here instead of targeting the entire document we target the particular id  which  was result
+// const heading = result.querySelector("h1");
+// result.removeChild(heading);
+
+// innerHTML
+// textContent
+
+// const first = document.getElementById("first");
+// const div = document.getElementById("second");
+// const item = document.querySelector(".item");
+
+// console.log(div.textContent);
+// console.log(first.innerHTML);
+
+// // using the below to do same just as createTextNode
+
+// const ul = document.createElement("ul");
+// ul.innerHTML = `<li class = "pep">frank</li><li>mona</li>`;
+// // document.body.prepend(ul);
+
+// document.body.appendChild(ul);
+
+// CSS
+// const random = document.querySelector(".random");
+
+// random.classList.add("color");
+
+// selectElement
+// addEventListener('event', callBackFunction)
+// what do event do?
+
+// const btn = document.querySelector(".btn");
+// const heading = document.querySelector("h2");
+
+// btn.addEventListener("click", function () {
+//   console.log(`this me`);
+// });
+
+// here we used annonmous function
+// btn.addEventListener("click", function () {
+//   heading.classList.add("blue");
+// });
+
+// here we use normal function
+
+// function eventlist() {
+//   heading.classList.add("blue");
+// }
+
+// btn.addEventListener("click", eventlist);
+
+// adding if statement
+
+// function eventlist() {
+//   const hasclass = heading.classList.contains("blue");
+//   if (hasclass) {
+//     heading.classList.remove("blue");
+//   } else {
+//     heading.classList.add("blue");
+//   }
+// }
+
+// btn.addEventListener("click", eventlist);
+
+// clicks --fires after full action occurs
+// mouseDown -- button is pressed
+// mouseUp -- button is released
+// mouseEnter -- move unto another Element
+// mouseLeave -- moved out of an element
+
+// const btn = document.querySelector(".btn");
+// const heading = document.querySelector("h2");
+
+// btn.addEventListener("click", function () {
+//   console.log(`u clicked`);
+// });
+
+// btn.addEventListener("mousedown", function () {
+//   console.log(`button pressed`);
+// });
+
+// btn.addEventListener("mouseup", function () {
+//   console.log(`u realesed`);
+// });
+
+// heading.addEventListener("mouseenter", function () {
+//   heading.classList.add("color");
+// });
+
+// heading.addEventListener("mouseleave", function () {
+//   heading.classList.remove("color");
+// });
+
+// keypress -- when key is pressed
+// keydown -- when the key is down
+// keyup -- when key is released
+
+// const nameInput = document.getElementById("name");
+
+// nameInput.addEventListener("keypress", function () {
+//   console.log("miami");
+// });
+
+// nameInput.addEventListener("keydown", function () {
+//   console.log("miami");
+// });
+
+// nameInput.addEventListener("keyup", function () {
+//   console.log("miami");
+// });
+
+// event object argument e, evt,event
+// info about triggered event
+// event.type
+// event.currentTarget
+// this keyword
+// prevent default() - prevent defalt behaviour
+
+// const heading = document.querySelector("h2");
+// const btn = document.querySelector(".btn");
+
+// heading.addEventListener("click", function (event) {
+//   event.currentTarget.classList.add("blue");
+// });
+
+// btn.addEventListener("click", function (event) {
+//   console.log(event.type);
+// });
+
+// preventDefault() - preventts default behaviour for example the link is placed below and when u click it takes u to the top thats the default behaviour but in other to avoid that we use that method
+
+// const link = document.getElementById("link");
+
+// // using normal function for the eveentListner
+
+// function linkFunc(event) {
+//   event.preventDefault();
+// }
+
+// link.addEventListener("click", linkFunc);
+
+// currentTarget - always efers to the element to which the event handler has been attched to
+// target -- identifies the element on which the event occured
+
+// const btns = document.querySelectorAll(".btn");
+
+// btns.forEach(function (btn) {
+//   btn.addEventListener("click", function (event) {
+//     // event.currentTarget.style.color = "green";
+//     // console.log(event.currentTarget);
+
+//   });
+// });
+
+// it allows us to select dynamic element
+// event propagation -- orders the event are fired
+// event bubbling -- clicked element first then bubbles up -- default
+// event capturing -- fires at the rrot and fires until reaches target
